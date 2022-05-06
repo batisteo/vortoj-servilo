@@ -2,6 +2,8 @@ __pycache__/
 *coverage*
 report*
 database.sqlite3
+static/
 media/*
 !media/testCategory.zip
 .env
+.venv

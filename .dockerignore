@@ -1,0 +1,10 @@
+*
+!.env
+!Dockerfile
+!entrypoint.sh
+!Makefile
+!pyproject.toml
+!poetry.lock
+!manage.py
+!config
+!apps
