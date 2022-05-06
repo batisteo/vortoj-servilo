@@ -7,7 +7,10 @@ SECRET_KEY = config("SECRET_KEY")
 DEBUG = config("DEBUG", default=False, cast=bool)
 USE_TZ = True
 TIME_ZONE = "Europe/Bratislava"
-USE_I18N = USE_L10N = False
+USE_I18N = False
+
+AUTH_USER_MODEL = "core.User"
+AUTHENTICATION_BACKENDS = ["apps.core.auth.EmailBackend"]
 
 STATIC_URL = "static/"
 STATIC_ROOT = config("STATIC_ROOT", default=str(BASE_DIR / "static/"))
@@ -37,6 +40,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "corsheaders",
     "django.contrib.staticfiles",
+    "apps.core",
 ]
 
 MIDDLEWARE = [

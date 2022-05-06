@@ -1,0 +1,7 @@
+root = true
+
+[*.py]
+profile = black
+known_first_party = apps
+known_django = django,rest_framework
+sections = FUTURE,STDLIB,DJANGO,THIRDPARTY,FIRSTPARTY,LOCALFOLDER
