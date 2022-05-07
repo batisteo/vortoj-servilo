@@ -4,8 +4,11 @@ import pytest
 from pytest_factoryboy import register
 
 from apps.core.factories import UserFactory
+from apps.game.factories import CategoryFactory, LanguageFactory
 
 register(UserFactory)  # fixtures: user & user_factory
+register(CategoryFactory)  # fixtures: category & category_factory
+register(LanguageFactory)  # fixtures: language & language_factory
 
 
 @pytest.fixture()
