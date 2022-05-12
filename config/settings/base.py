@@ -108,5 +108,17 @@ REST_FRAMEWORK = {
     ],
 }
 
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+if SENDGRID_API_KEY := config("SENDGRID_API_KEY", default=None):
+    INSTALLED_APPS += ["anymail"]
+    EMAIL_BACKEND = "anymail.backends.sendgrid.EmailBackend"
+    ANYMAIL = {
+        "SENDGRID_API_KEY": SENDGRID_API_KEY,
+        "SENDGRID_API_URL": config(
+            "SENDGRID_API_URL", default="https://api.sendgrid.com/v3/"
+        ),
+    }
+
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"

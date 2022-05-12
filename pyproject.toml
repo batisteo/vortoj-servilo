@@ -12,7 +12,7 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry.dependencies]
 python = "^3.8"
 django = "^4"
-django-anymail = "^8.5"
+django-anymail = {extras = ["sendgrid"], version = "^8.5"}
 django-cors-headers = "^3.11.0"
 django-extensions = "^3.1.5"
 django-filter = "^21.1"
