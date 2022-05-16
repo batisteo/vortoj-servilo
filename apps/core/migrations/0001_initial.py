@@ -71,7 +71,7 @@ class Migration(migrations.Migration):
                     models.BooleanField(
                         default=False,
                         help_text="Designates whether the user can log into this admin site.",
-                        verbose_name="Curator or admin",
+                        verbose_name="staff status",
                     ),
                 ),
                 (
